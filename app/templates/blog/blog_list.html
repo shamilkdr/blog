@@ -1,0 +1,35 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<div class="container-fluid">
+          <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page">Blogs</li>
+                    </ol>   
+            </nav>
+     <div class="row">
+          <div class="col-lg-2"></div>
+          <div class="col-lg-8">
+                    {% for instance in object_list %}
+                    <div class="card mt-2 mb-2">
+                              <div class="card-header">
+                                   shamil                  
+                              </div>
+                              <div class="card-body">
+                                <h5 class="card-title">{{ instance.title }}</h5>
+                                <p class="card-text">{{ instance.content }}</p>
+                                <a href="#" class="btn btn-primary">Read Now</a>
+                              </div>
+                    </div>
+                    {% endfor %}
+                             
+          </div>
+          <div class="col-lg-2"></div>
+     </div>
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+<form action='.' method='POST'>{% csrf_token %}
+    <h1>Do you want to delete the product "{{ object.title|as_crispy_field  }}"?</h1>
+    <p><input type='submit' value='Yes' />  <a href='../'>Cancel</a></p>
+
+</form>
+
+
+
+
+{% endblock %}
